@@ -18,7 +18,7 @@ First, reformat the .tsv format dataset into format used by the OpenNMT preproce
 
     python reformat_data_for_opennmt.py --input_path path_to_data --output_path output_path
 
-Second, run OpenNMT preprocess. output_path should be the same as the output of step 0, and opennmt_path should point to the src/OpenNMT directory in this repo.
+Second, run OpenNMT preprocess. output_path should be the same as the output of the previous step, and opennmt_path should point to the src/OpenNMT directory in this repo.
 
     bash opennmt_preprocess.sh output_path opennmt_path
 
