@@ -14,8 +14,16 @@ We used [OpenNMT](https://github.com/OpenNMT/OpenNMT-py) for our experiments. Th
 
 ### Preprocessing
 
-0. Reformat the .tsv format dataset into format used by the OpenNMT preprocessing code:
+1. Reformat the .tsv format dataset into format used by the OpenNMT preprocessing code:
     python reformat_data_for_opennmt.py --input_path path_to_data --output_path output_path
 
-1. Run OpenNMT preprocess. output_path should be the same as the output of step 0, and opennmt_path should point to the src/OpenNMT directory in this repo.
+2. Run OpenNMT preprocess. output_path should be the same as the output of step 0, and opennmt_path should point to the src/OpenNMT directory in this repo.
     bash opennmt_preprocess.sh output_path opennmt_path
+
+
+### Training and inference
+
+See scripts named `run_x.sh` under `scripts/`, where x is one of `transformer`, `lstm_uni`, `lstm_bi`. Run with the same commandline arguments as the preprocessing step:
+    bash run_transformer.sh output_path opennmt_path
+
+Please refer to the individual script files for the hyperparameter settings for each model and random seed.
