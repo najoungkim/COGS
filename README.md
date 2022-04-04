@@ -6,6 +6,12 @@ This repository contains the dataset used in the paper [COGS: A Compositional Ge
 
 The dataset can be found under `data/`. `dev` and `test` contain in-distribution examples and `gen` contains the generalization examples discussed in our paper. We used examples in `train` for our main experiment and `train_100` for the additional experiment in the appendix with increased number of exposure examples.
 
+### Types of generalization
+The final column in `gen.tsv` contains information about the particular generalization case described in the paper (see Table 7 for a full list). 
+You can use `data/gen_cases_to_paper_sections.json` to map the column values to a more informative description of the generalization tested, plus a link to the relevant paper section.
+
+**We encourage reporting generalization performance by case as well as the aggregate performance on the full generalization set. In particular, lexical vs. structural divide seems important.**
+`cp_recursion`, `pp_recursion`, and `obj_pp_to_subj_pp` correspond to structural generalization and the rest, lexical generalization. 
 
 ## Experiments
 
