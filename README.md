@@ -2,6 +2,18 @@
 
 This repository contains the dataset used in the paper [COGS: A Compositional Generalization Challenge Based on Semantic Interpretation](https://www.aclweb.org/anthology/2020.emnlp-main.731/), accepted to EMNLP 2020. 
 
+## **Changelog**
+2022/09/13: Fixed semantic roles of 50 examples in the generalization set.
+Affected subset is `obj_to_sub_pp` only, where roles of animate subjects of unaccusative verbs were being marked as agent instead of theme.
+
+Example:
+```
+The researcher in a room froze -> 
+* researcher ( x _ 1 ) ; researcher . nmod . in ( x _ 1 , x _ 4 ) AND room ( x _ 4 ) AND freeze . ~~agent~~**theme** ( x _ 5 , x _ 1 )
+
+```
+(h/t to Andrew Drozdov for flagging!)
+
 ## Dataset
 
 The dataset can be found under `data/`. `dev` and `test` contain in-distribution examples and `gen` contains the generalization examples discussed in our paper. We used examples in `train` for our main experiment and `train_100` for the additional experiment in the appendix with increased number of exposure examples.
