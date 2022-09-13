@@ -9,7 +9,7 @@ Affected subset is `obj_pp_to_sub_pp` only, where roles of animate subjects of u
 Example:
 ```
 The researcher in a room froze -> 
-* researcher ( x _ 1 ) ; researcher . nmod . in ( x _ 1 , x _ 4 ) AND room ( x _ 4 ) AND freeze . ~~agent~~**theme** ( x _ 5 , x _ 1 )
+* researcher ( x _ 1 ) ; researcher . nmod . in ( x _ 1 , x _ 4 ) AND room ( x _ 4 ) AND freeze . theme ( x _ 5 , x _ 1 )
 
 ```
 (h/t to Andrew Drozdov for flagging!)
