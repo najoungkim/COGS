@@ -4,7 +4,7 @@ This repository contains the dataset used in the paper [COGS: A Compositional Ge
 
 ## **Changelog**
 2022/09/13: Fixed semantic roles of 50 examples in the generalization set.
-Affected subset is `obj_to_sub_pp` only, where roles of animate subjects of unaccusative verbs were being marked as agent instead of theme.
+Affected subset is `obj_pp_to_sub_pp` only, where roles of animate subjects of unaccusative verbs were being marked as agent instead of theme.
 
 Example:
 ```
